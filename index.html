@@ -2,40 +2,40 @@
 
 <script>
 
-	function pulaLinha() {
+	function breakLine() {
 		document.write("<br>");
 		document.write("<br>");
 	}
 
-	function mostra(frase) {
-		document.write(frase);
-		pulaLinha();
+	function write(text) {
+		document.write(text);
+		breakLine();
 	}
 
-	function calculaImc(altura, peso) {
-		return peso / (altura * altura);
+	function calculateBMI(height, weight) {
+		return weight / (height * height);
 	}
 
-	var nome = prompt("Informe o seu nome");
-	var alturaInformada = prompt(nome + ", informe sua altura em metros");
-	var pesoInformado = prompt(nome + ", informe seu peso em kg");
-	var imc = calculaImc(alturaInformada, pesoInformado);
+	var name = prompt("Inform your name");
+	var height = prompt(name + ", enter your height in meters");
+	var weight = prompt(name + ", enter your weight in kilograms");
+	var bmi = calculateBMI(height, weight);
 
-	mostra(nome + ", o seu IMC é " + imc);
+	write(name + ", your BMI is " + bmi);
 
-	if (imc < 18.5) {
-		mostra("Você está abaixo do recomendado");
+	if (bmi < 18.5) {
+		write("Your BMI is below recommendations.");
 	}
 
-	if (imc >= 18.5 && imc <= 24.9) {
-		mostra("Seu IMC está excelente");
+	if (bmi >= 18.5 && bmi <= 24.9) {
+		write("Your BMI is excellent.");
 	}
 
-	if (imc >= 25 && imc <= 29.9) {
-		mostra("Você está com Sobrepeso");
+	if (bmi >= 25 && bmi <= 29.9) {
+		write("According to your BMI, you are overweight.");
 	}
 
-	if (imc > 30) {
-		mostra("Você está com Obesidade");
+	if (bmi > 30) {
+		write("According to your BMI, you are obese.");
 	}
 </script>

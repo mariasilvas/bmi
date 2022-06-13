@@ -1,43 +1,49 @@
-# Test Scenarios para Calculadora de IMC
+# Test Scenarios for BMI Calculator
 
-## 01 - IMC Abaixo do Recomendado
-| TC ID | Description               | Test Data                     | Expected result                                                   |
-| ----- | ------------------------- | ----------------------------- | ----------------------------------------------------------------- |
-| 1     | IMC abaixo de 18.4 kg/m²  | Altura = 1.70 e Peso = 49.13  | IMC=17kg/m² e deve exibir mensagem de IMC abaixo do recomendado   |
-| 2     | IMC exatamente 18.4 kg/m² | Altura = 1.70 e Peso = 53.176 | IMC=18.4kg/m² e deve exibir mensagem de IMC abaixo do recomendado |
+## TS01 - Underweight BMI
+| Test Case ID | Test Case Description | Test Data                            | Expected result                                                      | Status                  |
+| ------------ | --------------------- | ------------------------------------ | -------------------------------------------------------------------- | ----------------------- |
+| TC01         | BMI below 18.4kg/m²   | Height = 1.70m and Weight = 49.13kg  | BMI=17kg/m² and should display the message "below recommended BMI"   | :white_check_mark: Pass |
+| TC02         | BMI exactly 18.4kg/m² | Height = 1.70m and Weight = 53.176kg | BMI=18.4kg/m² and should display the message "below recommended BMI" | :white_check_mark: Pass |
 
-## 02 - IMC Excelente
-| TC ID | Description                      | Test Data                     | Expected result                                       |
-| ----- | -------------------------------- | ----------------------------- | ----------------------------------------------------- |
-| 1     | IMC exatamente 18.5 kg/m²        | Altura = 1.70 e Peso = 53.465 | IMC=18.5kg/m² e deve exibir mensagem de IMC excelente |
-| 2     | IMC entre 18.5kg/m² e 24.9 kg/m² | Altura = 1.70 e Peso = 57.8   | IMC=20kg/m² e deve exibir mensagem de IMC excelente   |
-| 3     | IMC exatamente 24.9 kg/m²        | Altura = 1.70 e Peso = 71.961 | IMC=24.9kg/m² e deve exibir mensagem de IMC excelente |
+## TS02 - Excellent BMI
+| Test Case ID | Test Case  Description               | Test Data                            | Expected result                                              | Status                  |
+| ------------ | ------------------------------------ | ------------------------------------ | ------------------------------------------------------------ | ----------------------- |
+| TC01         | BMI exactly 18.5 kg/m²               | Height = 1.70m and Weight = 53.465kg | BMI=18.5kg/m² and should display the message "Excellent BMI" | :white_check_mark: Pass |
+| TC02         | BMI between 18.5kg/m² and 24.9 kg/m² | Height= 1.70m and Weight = 57.8kg    | BMI=20kg/m² and should display the message "Excellent BMI"   | :white_check_mark: Pass |
+| TC03         | BMI exactly 24.9 kg/m²               | Height = 1.70m and Weight = 71.961kg | BMI=24.9kg/m² and should display the message "Excellent BMI" | :white_check_mark: Pass |
 
-## 03 - IMC Sobrepeso
-| TC ID | Description                     | Test Data                     | Expected result                                       |
-| ----- | ------------------------------- | ----------------------------- | ----------------------------------------------------- |
-| 1     | IMC exatamente 25 kg/m²         | Altura = 1.70 e Peso = 72.25  | IMC=25kg/m² e deve exibir mensagem de IMC Sobrepeso   |
-| 2     | IMC entre 25 kg/m² e 29.9 kg/m² | Altura = 1.70 e Peso = 75.14  | IMC=26kg/m² e deve exibir mensagem de IMC Sobrepeso   |
-| 3     | IMC exatamente 29.9 kg/m²       | Altura = 1.70 e Peso = 86.411 | IMC=29.9kg/m² e deve exibir mensagem de IMC Sobrepeso |
+## TS03 - Overweight BMI
+| Test Case ID | Test Case  Description            | Test Data                            | Expected result                                           | Status                  |
+| ------------ | --------------------------------- | ------------------------------------ | --------------------------------------------------------- | ----------------------- |
+| TC01         | BMI exactly 25kg/m²               | Height = 1.70m and Weight = 72.25kg  | BMI=25kg/m² and should display the message "Overweight"   | :white_check_mark: Pass |
+| TC02         | BMI between 25kg/m² and 29.9kg/m² | Height = 1.70m and Weight = 75.14kg  | BMI=26kg/m² and should display the message "Overweight"   | :white_check_mark: Pass |
+| TC03         | BMI exactly 29.9 kg/m²            | Height = 1.70m and Weight = 86.411kg | BMI=29.9kg/m² and should display the message "Overweight" | :white_check_mark: Pass |
 
-## 04 - IMC Obesidade
- | TC ID | Description             | Test Data                    | Expected result                                     |
- | ----- | ----------------------- | ---------------------------- | --------------------------------------------------- |
- | 1     | IMC exatamente 30 kg/m² | Altura = 1.70 e Peso = 86.7  | IMC=30kg/m² e deve exibir mensagem de IMC Obesidade |
- | 2     | IMC acima de 30kg/m²    | Altura = 1.70 e Peso = 144.5 | IMC=50kg/m² e deve exibir mensagem de IMC Obesidade |
+## TS04 - Obesity BMI
+ | Test Case ID | Test Case Description    | Test Data                           | Expected result                                      | Status                  |
+ | ------------ | ------------------------ | ----------------------------------- | ---------------------------------------------------- | ----------------------- |
+ | TC01         | BMI exactly 30 kg/m²     | Height = 1.70m and Weight = 86.7kg  | BMI=30kg/m² and should display the message "Obesity" | :white_check_mark: Pass |
+ | TC02         | BMI greater than 30kg/m² | Height = 1.70m and Weight = 144.5kg | BMI=50kg/m² and should display the message "Obesity" | :white_check_mark: Pass |
 
-## 05 - Validações do formulário
-| TC ID | Description                        | Test Data             | Expected result                                                |
-| ----- | ---------------------------------- | --------------------- | -------------------------------------------------------------- |
-| 1     | Peso com vírgula                   | Inserir peso = 52,2   | A calculadora deve exibir um alerta e pedir o peso novamente   |
-| 2     | Peso com caractere não númericos   | Inserir peso = 1abc   | A calculadora deve exibir um alerta e pedir o peso novamente   |
-| 3     | Peso acima de 300                  | Inserir peso = 300    | A calculadora deve exibir um alerta e pedir o peso novamente   |
-| 4     | Peso menor que 10                  | Inserir peso = 10     | A calculadora deve exibir um alerta e pedir o peso novamente   |
-| 5     | Peso negativo                      | Inserir peso = -60    | A calculadora deve exibir um alerta e pedir o peso novamente   |
-| 6     | Altura com vírgula                 | Inserir altura = 1,70 | A calculadora deve exibir um alerta e pedir a altura novamente |
-| 7     | Altura maior que 3 metros          | Inserir altura = 3    | A calculadora deve exibir um alerta e pedir a altura novamente |
-| 8     | Altura menor que 1 metro           | Inserir altura = 1    | A calculadora deve exibir um alerta e pedir a altura novamente |
-| 9     | Altura com caractere não númericos | Inserir altura = 1abc | A calculadora deve exibir um alerta e pedir a altura novamente |
+## TS05 - Validações do formulário
+| Test Case ID | Test Case Description                     | Test Data                                  | Expected result                                                     | Status   |
+| ------------ | ----------------------------------------- | ------------------------------------------ | ------------------------------------------------------------------- | -------- |
+| TC01         | Enter weight with comma                   | Nome= Test, Height= 1.70 and Weight = 52,2 | The calculator should display an alert and ask for the weight again | :x: Fail |
+| TC02         | Enter weight with non-numeric characters  | Nome= Test, Height= 1.70  Weight = 1abc    | The calculator should display an alert and ask for the weight again | :x: Fail |
+| TC03         | Enter weight greater than 300             | Nome= Test, Height= 1.70  Weight = 1000    | The calculator should display an alert and ask for the weight again | :x: Fail |
+| TC04         | Enter weight less than 10                 | Only Weight = 9                            | The calculator should display an alert and ask for the weight again | :x: Fail |
+| TC05         | Enter a negative value for weight         | Only Weight = -60                          | The calculator should display an alert and ask for the weight again | :x: Fail |
+| TC06         | Enter height with comma                   | Only Height = 1,70                         | The calculator should display an alert and ask for the height again | :x: Fail |
+| TC07         | Enter height greater or equal to 3 meters | Only Height = 3                            | The calculator should display an alert and ask for the height again | :x: Fail |
+| TC08         | Enter height less than 1                  | Only Height = 0.9                          | The calculator should display an alert and ask for the height again | :x: Fail |
+| TC09         | Enter height with non-numeric characters  | Only Height = 1abc                         | The calculator should display an alert and ask for the height again | :x: Fail |
+| TC10         | Enter a negative value for height         | Only Height = -60                          | The calculator should display an alert and ask for the height again | :x: Fail |
+| TC11         | Blank fields                              | Blank field                                | The calculator should display an alert and ask for the field again  | :x: Fail |
 
+<sub>
+Test Techniques:
 
-
+Equivalence partitioning (EP) 
+Boundary Value Analysis (BVA) 
+</sub>

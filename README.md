@@ -1,5 +1,5 @@
-# IMC
-Calculadora de IMC
+# BMI
+BMI Calculator
 
-## Cenários de teste
-Todos os cenários de teste podem ser encontrado no arquivo [TEST_SCENARIOS.md](TEST_SCENARIOS.md)
+## Test Scenarios 
+All test scenarios can be found in the file [TEST_SCENARIOS.md](TEST_SCENARIOS.md)
