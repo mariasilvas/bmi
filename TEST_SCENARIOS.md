@@ -27,19 +27,19 @@
  | TC02         | BMI greater than 30kg/m² | Name = Test, Height = 1.70m and Weight = 144.5kg | BMI=50kg/m² and should display the message "Obesity" | :white_check_mark: Pass |
 
 ## TS05 - Validações do formulário
-| Test Case ID | Test Case Description                     | Test Data                                    | Expected result                                                     | Status   |
-| ------------ | ----------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------- | -------- |
-| TC01         | Enter weight with comma                   | Name = Test, Height = 1.70 and Weight = 52,2 | BMI is calculated correctly                                         | :x: Fail |
-| TC02         | Enter weight with non-numeric characters  | Name = Test, Height = 1.70 and Weight = 1abc | The calculator should display an alert and ask for the weight again | :x: Fail |
-| TC03         | Enter weight greater than 300             | Name = Test, Height = 1.70 and Weight = 1000 | The calculator should display an alert and ask for the weight again | :x: Fail |
-| TC04         | Enter weight less than 10                 | Name = Test, Height = 1.70 and Weight = 9    | The calculator should display an alert and ask for the weight again | :x: Fail |
-| TC05         | Enter a negative value for weight         | Name = Test, Height = 1.70 and Weight = -60  | The calculator should display an alert and ask for the weight again | :x: Fail |
-| TC06         | Enter height with comma                   | Name = Test, Height = 1,70 and Weight = 52   | BMI is calculated correctly                                         | :x: Fail |
-| TC07         | Enter height greater or equal to 3 meters | Name = Test, Height = 3    and Weight = 52   | The calculator should display an alert and ask for the height again | :x: Fail |
-| TC08         | Enter height less than 1                  | Name = Test, Height = 0.9  and Weight = 52   | The calculator should display an alert and ask for the height again | :x: Fail |
-| TC09         | Enter height with non-numeric characters  | Name = Test, Height = 1abc and Weight = 52   | The calculator should display an alert and ask for the height again | :x: Fail |
-| TC10         | Enter a negative value for height         | Name = Test, Height = -60  and Weight = 52   | The calculator should display an alert and ask for the height again | :x: Fail |
-| TC11         | Blank fields                              | Blank field                                  | The calculator should display an alert and ask for the field again  | :x: Fail |
+| Test Case ID | Test Case Description                     | Test Data                                    | Expected result                                                     | Status                  |
+| ------------ | ----------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------- | ----------------------- |
+| TC01         | Enter weight with comma                   | Name = Test, Height = 1.70 and Weight = 52,2 | BMI is calculated correctly                                         | :white_check_mark: Pass |
+| TC02         | Enter weight with non-numeric characters  | Name = Test, Height = 1.70 and Weight = 1abc | The calculator should display an alert and ask for the weight again | :white_check_mark: Pass |
+| TC03         | Enter weight greater than 300             | Name = Test, Height = 1.70 and Weight = 1000 | The calculator should display an alert and ask for the weight again | :white_check_mark: Pass |
+| TC04         | Enter weight less than 10                 | Name = Test, Height = 1.70 and Weight = 9    | The calculator should display an alert and ask for the weight again | :white_check_mark: Pass |
+| TC05         | Enter a negative value for weight         | Name = Test, Height = 1.70 and Weight = -60  | The calculator should display an alert and ask for the weight again | :white_check_mark: Pass |
+| TC06         | Enter height with comma                   | Name = Test, Height = 1,70 and Weight = 52   | BMI is calculated correctly                                         | :white_check_mark: Pass |
+| TC07         | Enter height greater or equal to 3 meters | Name = Test, Height = 3    and Weight = 52   | The calculator should display an alert and ask for the height again | :white_check_mark: Pass |
+| TC08         | Enter height less than 1                  | Name = Test, Height = 0.9  and Weight = 52   | The calculator should display an alert and ask for the height again | :white_check_mark: Pass |
+| TC09         | Enter height with non-numeric characters  | Name = Test, Height = 1abc and Weight = 52   | The calculator should display an alert and ask for the height again | :white_check_mark: Pass |
+| TC10         | Enter a negative value for height         | Name = Test, Height = -60  and Weight = 52   | The calculator should display an alert and ask for the height again | :white_check_mark: Pass |
+| TC11         | Blank fields                              | Blank field                                  | The calculator should display an alert and ask for the field again  | :white_check_mark: Pass |
 
 <sub>
 Test Techniques:
