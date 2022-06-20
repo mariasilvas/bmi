@@ -1,48 +1,36 @@
-function breakLine() {
-    document.write("<br>");
-    document.write("<br>");
-}
-
 function write(text) {
-    document.write(text);
-    breakLine();
+    result.innerText = text;
 }
 
 function calculateBMI(height, weight) {
-    return weight / (height * height);
-}
+    var name = ipt_name.value;
 
-var name = prompt("Inform your name");
-
-while (true) {
-    var heightString = prompt(name + ", enter your height in meters").replace(',', '.');
+    var heightString = ipt_height.value.replace(',', '.');
     var height = parseFloat(heightString);
-    if (heightString == height && height >= 1 && height < 3) {
-        break;
+    if (heightString != height || height < 1 || height > 3) {
+        alert('Invalid height, enter your height again!');
+        return;
     }
-    alert('Invalid height, enter your height again!');
-}
 
-while (true) {
-    var weightString = prompt(name + ", enter your weight in kilograms").replace(',', '.');
+    var weightString = ipt_weight.value.replace(',', '.');
     var weight = parseFloat(weightString);
-    if (weightString == weight && weight >= 40 && weight < 300) {
-        break;
+    if (weightString != weight || weight < 35 || weight > 300) {
+        alert('Invalid weight, enter your weight again!');
+        return;
     }
 
-    alert('Invalid weight, enter your weight again!');
-}
+    var bmi = weight / (height * height);
 
-var bmi = calculateBMI(height, weight);
+    var message = name + ", your BMI is " + (Math.round(bmi * 100) / 100) + "kg/m². ";
 
-write(name + ", your BMI is " + (Math.round(bmi * 100) / 100) + "kg/m²");
+    if (bmi < 18.5) {
+        write(message + "Your BMI is below recommendations.");
+    } else if (bmi <= 24.9) {
+        write(message + "Your BMI is excellent.");
+    } else if (bmi <= 29.9) {
+        write(message + "According to your BMI, you are overweight.");
+    } else {
+        write(message + "According to your BMI, you are obese.");
+    }
 
-if (bmi < 18.5) {
-    write("Your BMI is below recommendations.");
-} else if (bmi <= 24.9) {
-    write("Your BMI is excellent.");
-} else if (bmi <= 29.9) {
-    write("According to your BMI, you are overweight.");
-} else {
-    write("According to your BMI, you are obese.");
 }

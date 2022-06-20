@@ -1,3 +1,42 @@
-<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+<header>
+    <meta charset="UTF-8">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</header>
 
-<script src="bmi.js"></script>
+<body>
+    <h2>BMI Calculator </h2>
+
+    <div class="container">
+        <img src="./bmi_.jpeg" alt="BMI" width="500" height="300">
+    </div>
+
+    <p> Body mass index (BMI) is a measure of body fat based on height and weight that applies
+        to adult men and women.Use the tool below to compute yours.</p>
+    <fieldset>
+        <legend>Your data:</legend>
+
+        <label for="fname">Name:</label><br>
+        <input type="text" id="ipt_name"><br><br>
+
+        <label for="Height">Height<em> (meters)</em>:</label><br>
+        <input type="text" id="ipt_height"><br><br>
+
+        <label for="Weight">Weight<em> (kilogramas)</em>:</label><br>
+        <input type="text" id="ipt_weight"><br><br>
+
+        <input type="button" value="Submit" onclick="calculateBMI()">
+    </fieldset>
+
+    <p id="result"> </p>
+
+    <script src="bmi.js"></script>
+
+    <footer>
+        <p class="copyright">&copy; Copyright BMI Calculator - 2022</p>
+    </footer>
+</body>
+
+</html>
