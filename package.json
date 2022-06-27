@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "cypress": "^10.1.0"
+  },
+  "name": "BMI",
+  "description": "BMI Calculator",
+  "version": "1.0.0",
+  "main": "bmi.js",
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.2.0",
+    "mochawesome": "^7.1.3"
+  },
+  "scripts": {
+    "server": "npx http-server",
+    "test": "npx cypress run",
+    "cypress": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariasilvas/bmi.git"
+  },
+  "author": "Maria Silva Sabino",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariasilvas/bmi/issues"
+  },
+  "homepage": "https://github.com/mariasilvas/bmi#readme"
+}
