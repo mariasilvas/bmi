@@ -18,3 +18,6 @@ All test scenarios can be found in the file [TEST_SCENARIOS.md](TEST_SCENARIOS.m
  ```
  $ npm run-script cypress
  ```
+
+ ### Last Cypress Report
+ Open [cypress/reports/html/index.html](https://htmlpreview.github.io/?https://github.com/mariasilvas/bmi/blob/main/cypress/reports/html/index.html)
