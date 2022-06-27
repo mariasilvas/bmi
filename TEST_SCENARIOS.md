@@ -11,14 +11,14 @@
 | ------------ | ------------------------------------ | ------------------------------------------------- | ------------------------------------------------------------ | ----------------------- |
 | TC01         | BMI exactly 18.5 kg/m²               | Name = Test, Height = 1.70m and Weight = 53.465kg | BMI=18.5kg/m² and should display the message "Excellent BMI" | :white_check_mark: Pass |
 | TC02         | BMI between 18.5kg/m² and 24.9 kg/m² | Name = Test, Height = 1.70m and Weight = 57.8kg   | BMI=20kg/m² and should display the message "Excellent BMI"   | :white_check_mark: Pass |
-| TC03         | BMI exactly 24.9 kg/m²               | Name = Test, Height = 1.70m and Weight = 71.961kg | BMI=24.9kg/m² and should display the message "Excellent BMI" | :white_check_mark: Pass |
+| TC03         | BMI exactly 24.9 kg/m²               | Name = Test, Height = 1.70m and Weight = 71.96kg  | BMI=24.9kg/m² and should display the message "Excellent BMI" | :white_check_mark: Pass |
 
 ## TS03 - Overweight BMI
-| Test Case ID | Test Case  Description            | Test Data                                         | Expected result                                           | Status                  |
-| ------------ | --------------------------------- | ------------------------------------------------- | --------------------------------------------------------- | ----------------------- |
-| TC01         | BMI exactly 25kg/m²               | Name = Test, Height = 1.70m and Weight = 72.25kg  | BMI=25kg/m² and should display the message "Overweight"   | :white_check_mark: Pass |
-| TC02         | BMI between 25kg/m² and 29.9kg/m² | Name = Test, Height = 1.70m and Weight = 75.14kg  | BMI=26kg/m² and should display the message "Overweight"   | :white_check_mark: Pass |
-| TC03         | BMI exactly 29.9 kg/m²            | Name = Test, Height = 1.70m and Weight = 86.411kg | BMI=29.9kg/m² and should display the message "Overweight" | :white_check_mark: Pass |
+| Test Case ID | Test Case  Description            | Test Data                                        | Expected result                                           | Status                  |
+| ------------ | --------------------------------- | ------------------------------------------------ | --------------------------------------------------------- | ----------------------- |
+| TC01         | BMI exactly 25kg/m²               | Name = Test, Height = 1.70m and Weight = 72.25kg | BMI=25kg/m² and should display the message "Overweight"   | :white_check_mark: Pass |
+| TC02         | BMI between 25kg/m² and 29.9kg/m² | Name = Test, Height = 1.70m and Weight = 75.14kg | BMI=26kg/m² and should display the message "Overweight"   | :white_check_mark: Pass |
+| TC03         | BMI exactly 29.9 kg/m²            | Name = Test, Height = 1.70m and Weight = 86.41kg | BMI=29.9kg/m² and should display the message "Overweight" | :white_check_mark: Pass |
 
 ## TS04 - Obesity BMI
  | Test Case ID | Test Case Description    | Test Data                                        | Expected result                                      | Status                  |
@@ -26,7 +26,7 @@
  | TC01         | BMI exactly 30 kg/m²     | Name = Test, Height = 1.70m and Weight = 86.7kg  | BMI=30kg/m² and should display the message "Obesity" | :white_check_mark: Pass |
  | TC02         | BMI greater than 30kg/m² | Name = Test, Height = 1.70m and Weight = 144.5kg | BMI=50kg/m² and should display the message "Obesity" | :white_check_mark: Pass |
 
-## TS05 - Validações do formulário
+## TS05 - Form validations
 | Test Case ID | Test Case Description                     | Test Data                                    | Expected result                                                     | Status                  |
 | ------------ | ----------------------------------------- | -------------------------------------------- | ------------------------------------------------------------------- | ----------------------- |
 | TC01         | Enter weight with comma                   | Name = Test, Height = 1.70 and Weight = 52,2 | BMI is calculated correctly                                         | :white_check_mark: Pass |
